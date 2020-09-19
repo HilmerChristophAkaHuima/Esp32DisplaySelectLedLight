@@ -122,7 +122,7 @@ void loop() {
               digitalWrite(LEDWhitePin, LEDWhiteState);
               break;
             case 2:
-              LEDRedState = !LEDRedState
+              LEDRedState = !LEDRedState;
               digitalWrite(LEDRedPin, LEDRedState);
               break;
           }
@@ -136,10 +136,4 @@ void loop() {
   PushBRightState = PBR;
   PushBLeftState = PBL;
   PushBMidState = PBM;
-
-  if (currentMillis - previousMillis >= interval) {
-    previousMillis = currentMillis;
-    
-    paint();
-  }
 }
